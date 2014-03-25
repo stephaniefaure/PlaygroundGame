@@ -420,9 +420,9 @@ class InstantWinTest extends AbstractHttpControllerTestCase
     public function testscheduleOccurrencesDaysInTransitions()
     {
         $game = new InstantWinEntity();
-        
+
         $paris_time_zone = new \DateTimeZone('Europe/Paris');
-        
+
         $startDate = new \DateTime((date('Y')+1)."-10-21 00:00:00", $paris_time_zone);
         $startDate->add(new \DateInterval('P3D'));
         $endDate = new \DateTime((date('Y')+1)."-10-21 00:00:00", $paris_time_zone);
@@ -497,10 +497,10 @@ class InstantWinTest extends AbstractHttpControllerTestCase
 
         $game = new InstantWinEntity();
 
-        $startDate = new \DateTime("now");
+        $startDate = new \DateTime("today");
         $startDate->add(new \DateInterval('P3D'));
 
-        $endDate = new \DateTime("now");
+        $endDate = new \DateTime("today");
         $endDate->add(new \DateInterval('P3DT36H'));
 
         $game->setOccurrenceDrawFrequency('hour');
