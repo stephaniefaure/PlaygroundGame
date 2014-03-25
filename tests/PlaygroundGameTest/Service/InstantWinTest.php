@@ -497,11 +497,11 @@ class InstantWinTest extends AbstractHttpControllerTestCase
 
         $game = new InstantWinEntity();
 
-        $startDate = new \DateTime("today");
+        $startDate = new \DateTime();
         $startDate->add(new \DateInterval('P3D'));
 
-        $endDate = new \DateTime("today");
-        $endDate->add(new \DateInterval('P3DT36H'));
+        $endDate = new \DateTime();
+        $endDate->add(new \DateInterval('P3DT36H0M0S'));
 
         $game->setOccurrenceDrawFrequency('hour');
         $game->setStartDate($startDate);
